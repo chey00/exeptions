@@ -1,11 +1,21 @@
-number_as_string = input("Geben Sie eine Ganzzahl ein: ")
+def my_value_check(value):
+    try:
+        value_as_int = int(value)
+    except ValueError:
+        raise ValueError
+
+    if value_as_int > 100 or value_as_int < 0:
+        raise OverflowError("Value is not in range.")
+
+    print("Value is in range")
 
 try:
-    number_as_int = int(number_as_string)
+    my_value_check("a")
 
-    print("Die Zahl lautet:", number_as_int)
 except ValueError:
     print("Das war keine Ganzzahl")
+except OverflowError:
+    print("Zahl ist außerhalb des Wertebereichs")
 except:
     print("Hier ist etwas Anderes falsch gelaufen.")
 finally:
