@@ -11,6 +11,13 @@ def check_username(users_and_passwords):
     else:
         raise KeyError("Benutzer " + username + " nicht gefunden")
 
+# Aufgabe 2
+#
+# Erstellen Sie eine Funktion login_user mit dem Parameter users_and_passwords.
+# Die Funktion ruft zuerst die Funktion check_username auf. Wird keine Exception ausgegeben,
+# wird der Benutzername gespeichert und das Kennwort zu den Benutzernamen geprüft.
+
+
 users_and_passwords = dict()
 users_and_passwords["otto"] = "abcd1234"
 users_and_passwords["franz"] = "qwert"
